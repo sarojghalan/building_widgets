@@ -9,8 +9,13 @@ import 'package:building_ui/list_view.dart';
 import 'package:building_ui/second_page.dart';
 import 'package:building_ui/stack_view_practice.dart';
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
-void main() {
+void main() async 
+{
+  // initializing hive
+  await Hive.initFlutter();
+  var box =await  Hive.openBox('myBox');
   runApp(MyApp());
 }
 
